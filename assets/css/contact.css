@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #e0f1e8;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*! mobil start  */
+
+/* name iformation start  */
+
+.container {
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: "Karla", sans-serif;
+  width:100%;
+  padding: 24px;
+  margin-inline: 16px;
+  margin-block: 32px;
+  min-width: fit-content;
+}
+
+.container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: #2A4144;
+}
+
+.container p {
+font-size: 24px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #2A4144;
+}
+
+.container p span {
+  color: #0C7D69;
+}
+
+.nameIformation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container input {
+border: 1px solid  #86A2A5;
+border-radius: 8px;
+}
+
+
+/* name iformation end  */
+
+/*! mobil end  */
