@@ -12,6 +12,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: #e0f1e8;
+  font-family: "Karla", sans-serif;
+
 }
 
 img,
@@ -41,18 +43,49 @@ h6 {
 }
 
 /*! mobil start  */
+.sendMessage {
+  display: none;
+  flex-direction: column;
+  background-color: #2a4144;
+  width: fit-content;
+  padding: 24px;
+  border-radius: 16px;
+  gap: 8px;
+  font-family: "Karla", sans-serif;
+  position: relative;
+  left: 390px;
+  top: 50px;
+}
 
-/* name iformation start  */
+.sendCheck {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  color: #fff;
+}
+
+.sendMessage p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #e0f1e8;
+}
 
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: 0 auto;
   background-color: #fff;
-  font-family: "Karla", sans-serif;
-  width:100%;
+  width: 100%;
   padding: 24px;
   margin-inline: 16px;
   margin-block: 32px;
-  min-width: fit-content;
+  border-radius: 16px;
 }
 
 .container h1 {
@@ -61,19 +94,21 @@ h6 {
   line-height: 32px;
   letter-spacing: -1px;
   text-align: left;
-  color: #2A4144;
+  color: #2a4144;
 }
 
+/* name iformation start  */
+
 .container p {
-font-size: 24px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: #2A4144;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #2a4144;
 }
 
 .container p span {
-  color: #0C7D69;
+  color: #0c7d69;
 }
 
 .nameIformation {
@@ -83,11 +118,163 @@ color: #2A4144;
 }
 
 .container input {
-border: 1px solid  #86A2A5;
-border-radius: 8px;
+  border: 1px solid #86a2a5;
+  border-radius: 8px;
+  width: 100%;
+  height: 51px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #2a4144;
 }
 
+.nameIformationBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
 /* name iformation end  */
 
+.emailBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.query {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.query input {
+  width: 20px;
+  height: 20px;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#general {
+  display: flex;
+  border: 1px solid #86a2a5;
+  padding-block: 12px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #2a4144;
+  gap: 12px;
+  border-radius: 8px;
+  padding-left: 24px;
+}
+
+#support {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  border: 1px solid #86a2a5;
+  padding-block: 12px;
+  align-items: center;
+  color: #2a4144;
+  gap: 12px;
+  border-radius: 8px;
+  padding-left: 24px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meassage textarea {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #2a4144;
+}
+
+.precondition {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.precondition input {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #86a2a5;
+}
+
+.precondition p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.btn button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  color: #fff;
+  background-color: #0c7d69;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  padding-block: 12px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.table li {
+  list-style: none;
+  font-size: 16px;
+}
 /*! mobil end  */
+
+/*! tablet kısmı start  */
+
+@media (width >=768px) {
+  .nameIformation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .check {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*! tablet kısmı end  */
+
+/*! desktop kısmı start  */
+
+@media (width >= 1024px) {
+  .container input:hover {
+    border-color: #0c7d69;
+  }
+
+  #subBtn:hover {
+    background-color: #0c7d6950;
+  }
+}
+
+/*! desktop kısmı end  */
