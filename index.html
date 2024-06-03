@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İletişim Formu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <script src="assets/js/contact.js" defer></script>
 </head>
+
 <body>
+  <div class="sendMessage">
+    <div class="sendCheck">
+      <img src="assets/img/Check (1).svg" alt="">
+      <h6>Mesaj Gönderildi</h6>
+    </div>
+    <p>Formu doldurduğunuz için teşekkür ederiz. Yakında iletişime geçeceğiz!</p>
+  </div>
   <div class="container">
-    
+
+    <h1>Bize Ulaşın</h1>
+    <div class="nameIformation">
+      <div class="nameIformationBox">
+        <p>İsim <span>*</span></p>
+        <input type="text" required id="name" autocomplete="off">
+      </div>
+      <div class="nameIformationBox">
+        <p>Soyisim <span>*</span></p>
+        <input type="text" required id="surname" autocomplete="off">
+      </div>
+    </div>
+    <div class="emailBox">
+      <p>E-posta Adresi <span>*</span></p>
+      <input type="email" required id="email" autocomplete="off">
+    </div>
+    <div class="query">
+      <p>Sorgu Türü <span>*</span></p>
+      <label class="check">
+        <p id="general"><input type="radio" name="check">Genel Sorgulama</p>
+        <p id="support"><input type="radio" name="check">Destek Talebi</p>
+      </label>
+    </div>
+    <div class="message">
+      <p>Mesaj <span>*</span></p>
+      <textarea id="userMesagge" rows="10"></textarea>
+    </div>
+    <div class="precondition">
+      <input type="checkbox" id="checked">
+      <p>Ekibin sizinle iletişime geçmesini kabul ediyorum *</p>
+    </div>
+    <div class="btn">
+      <button id="subBtn">Gönder</button>
+    </div>
+    <ul class="table">
+      <li class="a"></li>
+      <li class="b"></li>
+      <li class="c"></li>
+      <li class="d"></li>
+    </ul>
   </div>
 </body>
+
 </html>
