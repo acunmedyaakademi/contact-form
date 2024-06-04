@@ -27,41 +27,61 @@
     <div class="nameIformation">
       <div class="nameIformationBox">
         <p>İsim <span>*</span></p>
-        <input type="text" required id="name" autocomplete="off">
+        <input required type="text" id="name" autocomplete="off">
+        <p class="control nameControl"></p>
       </div>
       <div class="nameIformationBox">
         <p>Soyisim <span>*</span></p>
-        <input type="text" required id="surname" autocomplete="off">
+        <input required type="text" id="surname" autocomplete="off">
+        <p class="control surNameControl"></p>
+
       </div>
     </div>
     <div class="emailBox">
       <p>E-posta Adresi <span>*</span></p>
-      <input type="email" required id="email" autocomplete="off">
+      <input required type="email" id="email" autocomplete="off">
+      <p class="control emailControl"></p>
     </div>
     <div class="query">
       <p>Sorgu Türü <span>*</span></p>
       <label class="check">
-        <p id="general"><input type="radio" name="check">Genel Sorgulama</p>
-        <p id="support"><input type="radio" name="check">Destek Talebi</p>
+        <p id="general"><input required type="radio" name="check" id="generalRadio" onclick="generalRadioClick()">Genel Sorgulama
+        </p>
+        <p id="support"><input required type="radio" name="check" id="supportRadio" onclick="supportRadioClick()">Destek Talebi
+        </p>
       </label>
+      <p class="control queryCheckControl"></p>
     </div>
     <div class="message">
       <p>Mesaj <span>*</span></p>
       <textarea id="userMesagge" rows="10"></textarea>
+      <p class="control messageControl"></p>
     </div>
     <div class="precondition">
-      <input type="checkbox" id="checked">
+      <input required type="checkbox" id="checked">
       <p>Ekibin sizinle iletişime geçmesini kabul ediyorum *</p>
     </div>
+    <p class="control checkboxControl"></p>
     <div class="btn">
       <button id="subBtn">Gönder</button>
     </div>
-    <ul class="table">
-      <li class="a"></li>
-      <li class="b"></li>
-      <li class="c"></li>
-      <li class="d"></li>
-    </ul>
+
+    <table class="table">
+      <tr>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>Email</th>
+        <th>Mesaj</th>
+        <th>Sorgu Türü</th>
+      </tr>
+      <tr>
+        <td class="a"></td>
+        <td class="b"> </td>
+        <td class="c"></td>
+        <td class="d"></td>
+        <td class="e"></td>
+      </tr>
+    </table>
   </div>
 </body>
 
