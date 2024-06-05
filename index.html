@@ -27,8 +27,9 @@
     <div class="nameIformation">
       <div class="nameIformationBox">
         <p>İsim <span>*</span></p>
-        <input required type="text" id="name" autocomplete="off">
-        <p class="control nameControl"></p>
+        <form id="form">
+          <input required type="text" id="name" autocomplete="off">
+          <p class="control nameControl"></p>
       </div>
       <div class="nameIformationBox">
         <p>Soyisim <span>*</span></p>
@@ -45,16 +46,18 @@
     <div class="query">
       <p>Sorgu Türü <span>*</span></p>
       <label class="check">
-        <p id="general"><input required type="radio" name="check" id="generalRadio" onclick="generalRadioClick()">Genel Sorgulama
+        <p id="general"><input required type="radio" name="check" id="generalRadio" onclick="generalRadioClick()">Genel
+          Sorgulama
         </p>
-        <p id="support"><input required type="radio" name="check" id="supportRadio" onclick="supportRadioClick()">Destek Talebi
+        <p id="support"><input required type="radio" name="check" id="supportRadio" onclick="supportRadioClick()">Destek
+          Talebi
         </p>
       </label>
       <p class="control queryCheckControl"></p>
     </div>
     <div class="message">
       <p>Mesaj <span>*</span></p>
-      <textarea id="userMesagge" rows="10"></textarea>
+      <textarea id="userMesagge" rows="8"></textarea>
       <p class="control messageControl"></p>
     </div>
     <div class="precondition">
@@ -65,7 +68,7 @@
     <div class="btn">
       <button id="subBtn">Gönder</button>
     </div>
-
+    </form>
     <table class="table">
       <tr>
         <th>İsim</th>

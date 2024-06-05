@@ -20,7 +20,8 @@ let emailControl = document.querySelector(".emailControl");
 let messageControl = document.querySelector(".messageControl");
 let checkboxControl = document.querySelector(".checkboxControl");
 let checked = document.querySelector("#checked");
-let sendMessage = document.querySelector('.sendMessage');
+let sendMessage = document.querySelector(".sendMessage");
+let form = document.querySelector("#form");
 table.style.display = "none";
 
 function generalRadioClick() {
@@ -33,9 +34,8 @@ function supportRadioClick() {
   general.style.backgroundColor = "transparent";
 }
 
-
-
-function handleSubmit() {
+function handleSubmit(e) {
+  e.preventDefault();
   table.style.display = "block ";
   if (names.value != "") {
     a.innerText = names.value;
@@ -46,7 +46,6 @@ function handleSubmit() {
     a.innerText = "İsim Kısmını Boş Bıraktınız";
     nameControl.innerText = "Bu alan gereklidir";
   }
-
   if (surname.value != "") {
     b.innerText = surname.value;
     surNameControl.innerText = "";
@@ -56,7 +55,6 @@ function handleSubmit() {
     b.innerText = "Soyisim Kısmını Boş Bıraktınız";
     surNameControl.innerText = "Bu alan gereklidir";
   }
-
   if (email.value != "") {
     c.innerText = email.value;
     emailControl.innerText = "";
@@ -66,7 +64,6 @@ function handleSubmit() {
     c.innerText = "E-Posta Kısmını Boş Bıraktınız";
     emailControl.innerText = "Geçerli Bir  E-Posta Adresi Girin";
   }
-
   if (!supportRadio.checked && !generalRadio.checked) {
     queryCheckControl.innerText = "Lütfen bir sorgu türü seçin";
   } else if (supportRadio.checked) {
@@ -75,8 +72,8 @@ function handleSubmit() {
   } else if (generalRadio.checked) {
     e.innerText = general.innerText;
     queryCheckControl.innerText = "";
-  }
 
+  }
   if (userMesagge.value != "") {
     d.innerText = userMesagge.value;
     messageControl.innerText = "";
@@ -86,18 +83,19 @@ function handleSubmit() {
     d.innerText = "Mesaj Kısmını Boş Bıraktınız";
     messageControl.innerText = "Bu alan gereklidir";
   }
-
   if (!checked.checked) {
     checkboxControl.innerText =
       "Bu formu göndermek için lütfen sizinle iletişime geçilmesini kabul edin";
   } else {
     checkboxControl.innerText = "";
   }
-  sendMessage.style.display ='block'
-  setTimeout(()=> {
-    sendMessage.style.display = 'none'
-  },3000); 
-
+  sendMessage.style.display = "block";
+  setTimeout(() => {
+    sendMessage.style.display = "none";
+  }, 3000);
+  form.reset();
+  general.style.backgroundColor = "transparent";
+  support.style.backgroundColor = "transparent";
 }
 
-subBtn.addEventListener("click", handleSubmit);
+form.addEventListener("submit", handleSubmit);
